@@ -12,8 +12,8 @@ AI Short Drama Skills, battle-tested in real production pipelines.
 <!-- 放一段 GIF：左边输入提示词 / 右边生成的短剧分镜画面，建议时长 4-6 秒，循环播放 -->
 <!-- ![Demo](./assets/hero-demo.gif) -->
 
-> 这里的每一条 Skill，都在真实短剧生产流水线中跑过验证。  
-> 直接复制使用，或一键导入 LuxReal 开始生产。
+> 这里的每一条 Skill，都在真实短剧生产流水线中被数以万计的用户跑过验证。  
+> 直接复制使用，或在 LuxReal 中直接开始生产。
 
 ---
 
