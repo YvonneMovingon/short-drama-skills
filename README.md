@@ -164,7 +164,6 @@ short-drama-skills/
 ---
 
 ## 贡献
-
 欢迎提交在真实短剧生产中验证过的 Skill。
 
 1. Fork 本仓库
@@ -178,4 +177,4 @@ short-drama-skills/
 这些 Skill 来自 [LuxReal](https://luxreal.com) 的内部生产流水线。  
 LuxReal 是专为短剧工作室和创作者设计的 AI 工业化制作平台。
 
-[🚀 免费体验 LuxReal，注册即得 200 积分 →](https://luxreal.com)
+[🚀 免费体验 LuxReal，现已接入Seedance2.0, 注册即免费得 800 积分 →](https://luxreal.com？utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
