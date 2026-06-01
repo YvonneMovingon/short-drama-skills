@@ -163,4 +163,4 @@ short-drama-skills/
 这些 Skill 来自 [LuxReal](https://luxreal.com) 的内部生产流水线。  
 LuxReal 是专为短剧工作室和创作者设计的 AI 工业化制作平台。
 
-[🚀 免费体验 LuxReal，现已接入Seedance2.0, 注册即免费得 800 积分 →](https://luxreal.com/ai-video?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
+[🚀 免费体验 LuxReal，现已接入Seedance2.0, 注册即免费得积分 →](https://luxreal.com/ai-video?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
