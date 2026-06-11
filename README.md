@@ -1,21 +1,13 @@
 # 🎬 Short Drama Skills
 
-**把剧本丢给 AI，拿回一整套可执行的分镜序列。**
+**经上万AIGC创作者工业化生产验证的 AI 短剧 Skill 合集，可在LuxReal平台直接使用。**
 
 [![Stars](https://img.shields.io/github/stars/YvonneMovingon/short-drama-skills?style=flat-square)](https://github.com/YvonneMovingon/short-drama-skills/stargazers)
 [![Skills](https://img.shields.io/badge/Skills-7-blue?style=flat-square)](#skill-一览)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 
 > 每一条 Skill 都在真实短剧生产流水线中跑过。  
-> 复制提示词即可使用，不绑定任何工具。
-
-**剧本原文 ↓**
-
-![剧本原文](./assets/script-before.png)
-
-**→ 自动拆解为叙事单元 ↓**
-
-![拆解后的叙事单元](./assets/script-after.png)
+> 复制提示词即可使用。
 
 ---
 
@@ -43,6 +35,14 @@
 - **主体描述**（角色动作、表情、道具交互，合并为连贯长句）
 - **光影/氛围**（仅在剧情需要时出现）
 - **预估时长**（基于台词字数和动作类型自动计算）
+
+- **剧本原文 ↓**
+
+![剧本原文](./assets/script-before.png)
+
+**→ 自动拆解为叙事单元 ↓**
+
+![拆解后的叙事单元](./assets/script-after.png)
 
 ### 内置规则
 
