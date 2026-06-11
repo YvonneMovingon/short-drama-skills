@@ -10,11 +10,11 @@
   
  **剧本原文 ↓**
 
-![剧本原文](./assets/script-before.png)
+![剧本原文](../../assets/script-before.png)
 
 **→ 自动拆解为叙事单元 ↓**
 
-![拆解后的叙事单元](./assets/script-after.png)
+![拆解后的叙事单元](../../assets/script-after.png)
 
 
 **[在 LuxReal 中一键使用 →](https://luxreal.com?skill=01)**
