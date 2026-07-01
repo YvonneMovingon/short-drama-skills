@@ -4,7 +4,7 @@
 
 文艺抒情风格的提示词生成，强调内心独白、微妙张力与诗意画面质感。使用逆光轮廓、电影颗粒、慢推镜头等手法，节奏克制，情绪浓度高。
 
-**[在 LuxReal 中一键使用 →](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
+**[在 LuxReal 中一键使用 →](https://www.luxreal.com?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
 )**
 
 ---
