@@ -1,136 +1,159 @@
-# 01 · 通用叙事拆解
+# 01 · General Narrative Breakdown
 
-**适合场景：** 日常剧情推进 / 对话段落 / 场景切换  
-**含：** 生成逻辑 + 预期镜头格式 + 分镜时长估算
+English | [简体中文](./prompt.zh-CN.md)
 
-将剧本叙事内容自动拆解为可执行的连续镜头序列，内置分镜拆分原则、视觉描述结构化规则、分镜时长估算指令，覆盖从剧本到可执行提示词的完整链路。
+**Best for:** everyday plot progression / dialogue scenes / scene transitions  
+**Includes:** generation logic + expected shot format + shot duration estimation
 
-### 效果示例
+This skill breaks script narrative into executable continuous shot sequences. It includes shot-splitting principles, structured visual description rules, and duration estimation instructions, covering the full path from raw script to executable video prompts.
 
-**剧本原文 ↓**
+### Example
 
-![剧本原文](../../script-before.png)
+**Original script ↓**
 
-**→ 自动拆解为叙事单元 ↓**
+![Original script](../../assets/script-before.png)
 
-![拆解后的叙事单元](../../script-after.png)
+**→ Automatically broken into narrative units ↓**
 
-**[在 LuxReal 中一键使用 →](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
-)**
+![Broken-down narrative units](../../assets/script-after.png)
+
+**[Use in LuxReal ->](https://luxreal.com?skill=01)**
 
 ---
 
-## 完整 Skill
+## Full Skill
 
 ```markdown
-## Constraints (必须严格遵守的原则)
+## Constraints
 
-### 0. 全局节奏控制（最高优先级）
+### 0. Global Pacing Control (Highest Priority)
 
-> **本提示词面向竖屏短剧（短视频），整体节奏定位为"快节奏叙事"。以下两条为最高优先级规则，当与其他规则冲突时，以本节为准。**
+> **This prompt is designed for vertical short dramas / short-form video. The overall pacing is fast narrative pacing. The following two rules have the highest priority. If they conflict with any other rule, this section wins.**
 
-#### 0-B. 信息密度原则 (Information Density — 最高优先级)
-**如果不提供新信息，就不切镜。** 新镜头的画面必须包含新的情节推进、新的环境细节或新的情绪强度。若无新信息，允许同景别、同机位延续，不强制切镜。
+#### 0-B. Information Density Principle (Highest Priority)
 
-#### 0-C. 非叙事镜头总量控制
-单个 beat 内，非叙事镜头（空镜、过渡镜头、建立关系镜头）的总时长占比 **不超过 20%**。超出时优先砍空镜和过渡镜头。
+**Do not cut to a new shot unless the new shot provides new information.** A new shot must introduce plot progression, new environmental detail, or stronger emotional intensity. If there is no new information, allow the same shot size and camera position to continue. Do not force a cut.
 
-### 1. 分镜拆分原则
+#### 0-C. Non-Narrative Shot Limit
 
-#### 叙事与动作类
-1. **复杂动作三段式拆解** — 动机/准备 → 执行过程 → 结果/反应，遵循动接动原则
-2. **空间转场需切镜** — 场景切换必须设立新分镜
-3. **时间跳跃需切镜** — 非连续时间流逝必须视觉化
-4. **人物关系变化需切镜** — 位置关系或主从关系改变时切镜
-5. **人数超载需切镜** — 同框超过2人时必须拆散，优先单人特写或双人中景
+Within a single beat, non-narrative shots such as empty shots, transition shots, or relationship-establishing shots must account for **no more than 20%** of the total duration. If the ratio exceeds 20%, remove empty shots and transition shots first.
 
-#### 情绪与表演类
-1. **情绪突变切特写** — 瞬间剧烈转变必须切 Close-up
-2. **情绪渐变切景别** — 缓慢情绪流露不切镜，通过更近景别靠近角色
-3. **对话视线乒乓** — 说话者→聆听者→说话者；关键反应镜头往往比说话更重要
+### 1. Shot-Splitting Principles
 
-#### 视听语言类
-- J-cut：下一场戏的声音提前在当前画面出现
-- L-cut：当前画面的声音延续到下一个画面
-- VFX独占镜头：视觉效果核心瞬间必须有独立镜头
-- 节拍控制：紧张/打斗用短镜头，抒情/悬疑用长镜头
+#### Narrative and Action
 
-#### 五、静态画面强制拆分（在拆解阶段直接执行）
-- 静态画面单镜头停留**不得超过 6s**
-- 若台词时长超过 6s，当场拆为多个子镜头，每个子镜头配独立视觉画面
+1. **Three-part breakdown for complex actions** — motivation / preparation -> execution -> result / reaction. Follow match-on-action logic.
+2. **Spatial transitions require a cut** — every location change must create a new shot.
+3. **Time jumps require a cut** — non-continuous time passage must be visualized.
+4. **Relationship changes require a cut** — cut when character positions or dominance relationships change.
+5. **Overloaded group shots require splitting** — if more than two people appear in the same frame, split the scene, prioritizing single-character close-ups or two-character medium shots.
 
-#### 长台词切分规则（触发条件：预估时长超过 8s）
-**核心原则：零删减 + 有节奏。** 严禁压缩、省略、改写原始台词。
+#### Emotion and Performance
 
-切分锚点（优先级）：话题转折点 → 情绪变化点 → 逻辑层级点 → 自然气口
+1. **Sudden emotional shifts cut to close-up** — intense instant emotional changes must use a close-up.
+2. **Gradual emotional shifts use shot-size progression** — do not cut abruptly. Move closer to the character through progressively tighter framing.
+3. **Dialogue eye-line ping-pong** — speaker -> listener -> speaker. Critical reaction shots are often more important than speaking shots.
 
-视听手法分配：
-| 编号 | 手法 | 适用场景 |
-|------|------|---------|
-| T1 | 正面说话镜头 | 说话者主动输出关键信息 |
-| T2 | 反应镜头 | 信息传递后展示听者反应（台词作V.O.） |
-| T3 | 道具/细节特写 | 台词提及具体事物（台词作V.O.） |
-| T4 | 闪回/意象镜头 | 台词涉及回忆或过去事件（台词作V.O.） |
-| T5 | 景别递进 | 情绪逐步升级 |
-| T6 | 动作伴随 | 角色边做事边说话 |
-| T7 | VO画面切换 | 旁白/画外音配画面 |
+#### Audiovisual Language
 
-约束：T1 占比不超过60%；T2 不可连续超过1次；T4 仅在有明确视觉指向时使用
+- J-cut: audio from the next scene begins before the visual cut.
+- L-cut: audio from the current scene continues into the next shot.
+- VFX-exclusive shot: the core visual-effect moment must receive its own shot.
+- Beat control: tension and fights use shorter shots; lyrical or suspenseful scenes use longer shots.
 
----
+#### Static Shot Forced Splitting
 
-### 2. 视觉转化五大铁律
+- A static image must not remain on screen for more than **6 seconds**.
+- If dialogue duration exceeds 6 seconds, split it immediately into multiple sub-shots, each with its own visual image.
 
-1. **台词具象化** — 台词涉及具体过去事件，必须插入闪回镜头；禁止仅拍说话的大头特写
-2. **潜台词外化** — 抽象情绪必须转化为具体肢体动作或道具互动（"焦急" → "手指不断抠着衣角，指甲发白"）
-3. **动作零脑补** — 严格忠实原著体态；动作有跳跃必须补充过渡动作，严禁瞬移
-4. **视点锁定** — 除非剧本明确写明，严禁主动切换场景；画外音出现时镜头聚焦屋内听者反应
-5. **关键信息特写** — 推动剧情的关键道具必须分配独立特写镜头；禁止将关键信息淹没在全景里
+#### Long Dialogue Splitting Rule
 
----
+Trigger: estimated duration exceeds 8 seconds.
 
-### 3. 视觉描述结构化
+**Core principle: preserve every word while keeping rhythm.** Do not compress, omit, rewrite, or reorder the original dialogue.
 
-每一条画面描述必须包含以下四个维度：
+Split anchors, in priority order:
 
-**【镜头与构图】** 必须明确景别（特写/中景/全景）+ 运镜（推/拉/摇/移/手持/固定）+ 视角（平视/仰拍/俯拍/过肩/POV等）
+Topic shift -> emotional shift -> logical hierarchy shift -> natural breath point
 
-**【主体描述】** 禁止使用"同上"、"紧接着"、"他/她"等模糊表述。同一角色动作、表情、道具交互合并为一个连贯长句，用逗号分隔，严禁使用分号断句。
-- 正确：「小明紧闭双眼，眉头剧烈抽动，手指死死扣住破碗边缘」
-- 错误：「小明紧闭双眼；小明眉头剧烈抽动；小明的手指扣住破碗」
+Audiovisual technique allocation:
 
-**【光影/氛围】** 只描述对剧情推动有必要的光影（关键道具反光、戏剧性光效）；若无特殊必要，直接省略
+| ID | Technique | Use Case |
+|----|-----------|----------|
+| T1 | Frontal speaking shot | The speaker actively delivers key information |
+| T2 | Reaction shot | Show the listener's reaction after information is delivered, with dialogue as V.O. |
+| T3 | Prop / detail close-up | Dialogue mentions a concrete object, with dialogue as V.O. |
+| T4 | Flashback / symbolic image | Dialogue refers to memory or past events, with dialogue as V.O. |
+| T5 | Shot-size progression | Emotion escalates step by step |
+| T6 | Action accompaniment | The character speaks while doing something |
+| T7 | V.O. visual switching | Narration or voice-over paired with changing visuals |
 
-**【画面背景】** 仅在第一个镜头或镜头方向发生重大变化时填写，8个字左右（如"地下室角落"、"操场跑道"）
+Constraints:
+
+- T1 must account for no more than 60%.
+- T2 must not appear more than once in a row.
+- T4 may only be used when there is a clear visual reference.
 
 ---
 
-### 4. 分镜时长估算
+### 2. Five Rules for Visual Conversion
 
-| 镜头类型 | 公式/时长 |
-|---------|---------|
-| 有台词（正常语速） | `round(字数÷8)+1秒` |
-| 有台词（争吵/急促） | `round(字数÷10)+1秒` |
-| 有台词（深情/遗言） | `round(字数÷5)+1秒` |
-| VO旁白 | `round(字数÷7)+1秒` |
-| 微动作/常规动作 | `2秒` |
-| 复杂连续动作 | `4秒` |
-| 强烈情绪反应 | `3秒` |
-| 环境/空镜/静物 | `2秒` |
-| 慢动作特效 | `3~4秒` |
-
-**优先冲突原则：** 镜头同时含台词和动作时，取两者计算结果中的较大值  
-**时长上限：每个分镜严格限制在 12s 以内**
+1. **Make dialogue concrete** — if dialogue refers to a specific past event, insert a flashback shot. Do not only film a talking-head close-up.
+2. **Externalize subtext** — abstract emotions must become visible physical actions or prop interactions. For example, "anxious" -> "fingers repeatedly pick at the edge of the coat, nails turning pale".
+3. **No imagined action gaps** — stay faithful to the original physical action. If an action jumps from one state to another, add a transition action. No teleporting.
+4. **Lock the point of view** — unless the script explicitly says otherwise, do not switch locations on your own. When off-screen voice appears, focus the shot on the listener's reaction in the room.
+5. **Close-up for key information** — any plot-driving prop must receive its own close-up. Do not bury key information in a wide shot.
 
 ---
 
-## Workflows
+### 3. Structured Visual Description
 
-1. 仔细阅读剧本，理解剧情、人物关系、情绪基调；参考人设图和场景图确认视觉风格
-2. 根据分镜拆分原则拆解镜头，**拆解时同步执行静态画面强制拆分**
-3. 根据分镜时长估算计算每个镜头预估时长
-4. 根据视觉描述结构化原则撰写画面描述提示词
-5. 校验单个beat内非叙事镜头占比是否超过20%，超出则精简
-6. 补充景别、运镜、对白、音效及设计意图
-7. 生成最终 JSON
+Each visual description must include the following four dimensions:
+
+**[Camera and Composition]**  
+Specify shot size (close-up / medium shot / wide shot), camera movement (push in / pull out / pan / tracking / handheld / locked-off), and angle (eye-level / low angle / high angle / over-the-shoulder / POV, etc.).
+
+**[Subject Description]**  
+Do not use vague phrasing such as "same as above", "then", "he", or "she". Merge the same character's action, expression, and prop interaction into one coherent long sentence, separated by commas. Do not split them with semicolons.
+
+Correct: "Xiao Ming shuts his eyes tightly, his brows twitch violently, his fingers gripping the cracked bowl until the knuckles turn white."
+
+Incorrect: "Xiao Ming shuts his eyes tightly; Xiao Ming's brows twitch; Xiao Ming grips the bowl."
+
+**[Lighting / Atmosphere]**  
+Only describe lighting that is necessary for the story, such as a key prop reflection or dramatic light effect. If there is no special need, omit this field.
+
+**[Background]**  
+Fill this in only for the first shot or when the shot direction changes significantly. Keep it short, around a few words, such as "basement corner" or "school track".
+
+---
+
+### 4. Shot Duration Estimation
+
+| Shot Type | Formula / Duration |
+|-----------|--------------------|
+| Dialogue, normal pace | `round(character_count / 8) + 1s` |
+| Dialogue, argument / urgent pace | `round(character_count / 10) + 1s` |
+| Dialogue, intimate / final words | `round(character_count / 5) + 1s` |
+| V.O. narration | `round(character_count / 7) + 1s` |
+| Micro action / routine action | `2s` |
+| Complex continuous action | `4s` |
+| Strong emotional reaction | `3s` |
+| Environment / empty shot / still object | `2s` |
+| Slow-motion effect | `3-4s` |
+
+**Conflict rule:** if a shot contains both dialogue and action, use the larger duration estimate.  
+**Duration cap:** each shot must be strictly limited to 12 seconds or less.
+
+---
+
+## Workflow
+
+1. Read the script carefully. Understand the plot, character relationships, and emotional tone. Refer to character and scene images to confirm the visual style.
+2. Break down shots according to the shot-splitting principles. **Apply the forced static-shot splitting rule during breakdown.**
+3. Estimate each shot's duration using the duration rules.
+4. Write visual descriptions according to the structured visual description rules.
+5. Check whether non-narrative shots exceed 20% within a single beat. If they do, simplify.
+6. Add shot size, camera movement, dialogue, sound effects, and design intent.
+7. Generate the final JSON.
 ```
