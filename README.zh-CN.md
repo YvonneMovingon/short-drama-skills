@@ -1,6 +1,6 @@
 # 🎬 Short Drama Skills
 
-**把剧本丢给 AI，拿回一整套可执行的分镜序列。**
+**把剧本丢给 AI，获得一套可执行的分镜脚本。**
 
 [English](./README.md) | 简体中文
 
@@ -8,8 +8,8 @@
 [![Skills](https://img.shields.io/badge/Skills-7-blue?style=flat-square)](#skill-一览)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 
-> 每一条 Skill 都在真实短剧生产流水线中跑过。  
-> 复制提示词即可使用，不绑定任何工具。
+> 每一条 Skill 都经过上万AIGC创作者在真实短剧生产过程中跑过。  
+> 复制提示词即可使用，或在LuxReal中直接使用
 
 ---
 
