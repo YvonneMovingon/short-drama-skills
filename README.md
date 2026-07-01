@@ -67,7 +67,7 @@ You can use these skills in any LLM that supports long prompts.
 
 You can also use the skills directly in LuxReal:
 
-[Use in LuxReal ->](https://luxreal.com)
+[Use in LuxReal ->](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
 
 ---
 
@@ -144,7 +144,7 @@ Upload a script, extract characters and scenes, generate storyboard previews, ke
 
 These skills are part of the prompt logic behind LuxReal's internal production workflow.
 
-[Try LuxReal ->](https://luxreal.com)
+[Try LuxReal ->](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
 
 ---
 
