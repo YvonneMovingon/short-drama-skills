@@ -4,7 +4,7 @@
 
 基于叙事焦点、空间一致性、动作连贯性和情绪流向，将连续 Clip 聚合为 Shot，并处理合并争夺与防孤立逻辑。适用于长剧本分集时保持故事节奏不断裂。
 
-**[在 LuxReal 中一键使用 →](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
+**[在 LuxReal 中一键使用 →](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
 )**
 
 ---
