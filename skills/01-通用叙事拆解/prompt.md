@@ -17,7 +17,7 @@ This skill breaks script narrative into executable continuous shot sequences. It
 
 ![Broken-down narrative units](../../assets/script-after.png)
 
-**[Use in LuxReal ->](https://luxreal.com?skill=01)**
+**[Use in LuxReal ->](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)**
 
 ---
 
