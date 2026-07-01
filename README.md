@@ -1,124 +1,129 @@
-# 🎬 Short Drama Skills
+# Short Drama Skills
 
-**经上万AIGC创作者工业化生产验证的 AI 短剧 Skill 合集，可在LuxReal平台直接使用。**
+Production-tested prompt rules for AI short drama generation.
+
+Turn raw scripts into structured shot sequences, cinematic video prompts, and reusable production workflows.
+
+These skills come from LuxReal's internal short drama pipeline. They are designed for creators, studios, prompt engineers, and developers building script-to-video or AI video production tools.
+
+English | [简体中文](./README.zh-CN.md)
 
 [![Stars](https://img.shields.io/github/stars/YvonneMovingon/short-drama-skills?style=flat-square)](https://github.com/YvonneMovingon/short-drama-skills/stargazers)
-[![Skills](https://img.shields.io/badge/Skills-7-blue?style=flat-square)](#skill-一览)
+[![Skills](https://img.shields.io/badge/Skills-7-blue?style=flat-square)](#skills)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 
-> 每一条 Skill 都在真实短剧生产流水线中跑过。  
-> 复制提示词即可使用。
+---
+
+## What Problem Does This Solve?
+
+Most AI video workflows can generate a single clip.
+
+The hard part is making a story work across many shots:
+
+- How many shots should a script be split into?
+- What should each shot show?
+- How long should each shot last?
+- How do you handle dialogue, reactions, emotional beats, action scenes, and scene transitions?
+- How do you keep the output structured enough for a real production pipeline?
+
+**Short Drama Skills** is a collection of reusable prompt rules for turning scripts into executable video production instructions.
+
+Instead of asking an AI model to "write a storyboard", these skills tell the model how to break down narrative beats, estimate shot duration, describe camera language, and generate structured outputs.
 
 ---
 
-## 这个仓库解决什么问题
+## Core Skill: General Narrative Breakdown
 
-用 AI 做短剧，最大的痛点不是「能不能生成一条视频」，而是：
+This is the most broadly useful skill in the repo.
 
-- 剧本扔进去，AI 不知道该拆成几个镜头、每个镜头拍什么
-- 生成的画面描述太模糊，视频模型出来的东西不可控
-- 情绪戏、动作戏、日常戏需要完全不同的镜头语言，一个提示词搞不定
+It turns a script segment into a structured shot sequence. Each shot includes:
 
-**Short Drama Skills 是一套经过工业化验证的提示词规则包。** 告诉 AI 怎么拆镜头、怎么写画面描述、每个镜头该多长，让 AI 从「能出视频」变成「能出连续剧」。
+- **Shot type, camera movement, and angle**
+- **Subject description**, including character action, expression, and prop interaction
+- **Lighting and atmosphere**, only when relevant to the story
+- **Estimated duration**, based on dialogue length and action type
+- **Structured output**, ready for downstream video generation workflows
 
----
+Use it for:
 
-## ⭐ 核心 Skill：通用叙事拆解
+- Everyday dialogue scenes
+- Short drama plot progression
+- Scene transitions
+- Script-to-shot-sequence workflows
 
-这是使用最广、覆盖场景最多的一条 Skill，解决「剧本 → 分镜序列」的完整链路。
-
-### 它做什么
-
-输入一段剧本，输出一组结构化的镜头序列。每个镜头包含：
-
-- **景别 + 运镜 + 视角**（特写/中景/全景，推/拉/摇/移，平视/仰拍/俯拍/过肩/POV）
-- **主体描述**（角色动作、表情、道具交互，合并为连贯长句）
-- **光影/氛围**（仅在剧情需要时出现）
-- **预估时长**（基于台词字数和动作类型自动计算）
-
-
-### 内置规则
-
-| 类别 | 核心规则 |
-|------|---------|
-| **节奏控制** | 信息密度原则——不提供新信息就不切镜；非叙事镜头占比不超过 20% |
-| **叙事拆分** | 空间转场切镜、时间跳跃切镜、人数超 2 人拆散、复杂动作三段式 |
-| **情绪处理** | 情绪突变切特写、渐变切景别、对话视线乒乓（反应镜头比说话更重要） |
-| **长台词切分** | 超过 8s 的台词强制拆分，7 种视听手法分配，T1 占比不超 60% |
-| **时长估算** | 正常语速 `round(字数÷8)+1s`，争吵 `÷10+1s`，深情 `÷5+1s`，每镜不超过 12s |
-
-### 快速使用
-
-**用法一：复制提示词，粘贴到任何 AI 工具**
-
-1. 打开 [`skills/01-通用叙事拆解/prompt.md`](./skills/01-通用叙事拆解/prompt.md)
-2. 复制 `## 完整 Skill` 下方的 markdown 内容
-3. 粘贴到 ChatGPT / Claude / 任何支持长提示词的 AI 工具
-4. 在后面追加你的剧本片段，发送
-
-**用法二：一键导入 LuxReal**
-
-点击 → [在 LuxReal 中使用通用叙事拆解]([https://luxreal.com?skill=01](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
-))，注册后自动加载，上传剧本直接出分镜。
-
-
-**[→ 查看完整提示词](./skills/01-通用叙事拆解/prompt.md)**
+[View the skill ->](./skills/01-通用叙事拆解/prompt.md)
 
 ---
 
-## Skill 一览
+## Quick Start
 
-通用叙事拆解覆盖 80% 的日常剧情。剩下的 20%——冲突戏、动作戏、多集连续剧——用下面的专项 Skill：
+You can use these skills in any LLM that supports long prompts.
 
-### 分镜生成（4 条）
+1. Open a skill under `/skills`
+2. Copy the content from `prompt.md`
+3. Paste it into ChatGPT, Claude, or your own LLM pipeline
+4. Add your script after the prompt
+5. Use the structured output in LuxReal or another AI video generation workflow
 
-| # | Skill | 一句话 | 什么时候用 |
-|---|-------|-------|-----------|
-| 01 | **[通用叙事拆解](./skills/01-通用叙事拆解/prompt.md)** | 剧本 → 带时长的镜头序列 | 日常剧情、对话、场景切换 |
-| 02 | [深度情绪刻画](./skills/02-深度情绪刻画/prompt.md) | 基于权力博弈拆解对话戏 | 告白、争吵、审问、谈判 |
-| 03 | [详细动态描述](./skills/03-详细动态描述/prompt.md) | 17 条专项规则拆解动作戏 | 打斗、追逐、武打、爆发 |
-| 04 | [按剧情连贯拆分副本](./skills/04-按剧情连贯拆分副本/prompt.md) | 长剧本分集保持节奏不断裂 | 多集连续短剧 |
+You can also use the skills directly in LuxReal:
 
-### 提示词润色（3 条）
-
-| # | Skill | 一句话 | 什么时候用 |
-|---|-------|-------|-----------|
-| 05 | [单视频提示词润色](./skills/05-单视频提示词润色/prompt.md) | 剧情描述 → 结构化视频提示词 | 通用出片 |
-| 06 | [高能戏剧化情节润色](./skills/06-高能戏剧化情节润色/prompt.md) | 好莱坞动作风格的高冲击力提示词 | 动作高潮、前 3 秒开场 |
-| 07 | [慢节奏细腻质感润色](./skills/07-慢节奏细腻质感润色/prompt.md) | 文艺抒情风格的细腻情感提示词 | 内心独白、诗意段落 |
+[Use in LuxReal ->](https://luxreal.com)
 
 ---
 
-## 适合谁
+## Skills
 
-- **短剧工作室 / 制作公司** — 用这套 Skill 统一团队的分镜标准，批量出片不走样
-- **编导 / 制片人** — 把分镜拆解交给 AI，自己专注创意和把控质量
-- **个人创作者** — 没有分镜师也能出专业级的镜头规划
-- **AI 短剧工具开发者** — MIT 协议，直接集成到你的产品里
+### Storyboard Generation
+
+| # | Skill | What It Does | Best For |
+|---|-------|--------------|----------|
+| 01 | [General Narrative Breakdown](./skills/01-通用叙事拆解/prompt.md) | Turns scripts into structured shot sequences with duration estimates | Dialogue, plot progression, scene transitions |
+| 02 | [Emotional Scene Breakdown](./skills/02-深度情绪刻画/prompt.md) | Breaks emotional dialogue scenes through power shifts, reactions, and close-ups | Confession, argument, interrogation, negotiation |
+| 03 | [Action Scene Description](./skills/03-详细动态描述/prompt.md) | Converts action-heavy scenes into detailed motion and camera descriptions | Fight scenes, chase scenes, physical conflict |
+| 04 | [Episode Continuity Splitting](./skills/04-按剧情连贯拆分副本/prompt.md) | Groups continuous clips into coherent shots while preserving pacing and continuity | Multi-episode short dramas |
+
+### Video Prompt Polishing
+
+| # | Skill | What It Does | Best For |
+|---|-------|--------------|----------|
+| 05 | [Video Prompt Polishing](./skills/05-单视频提示词润色/prompt.md) | Turns rough scene descriptions into structured video prompts | General video generation |
+| 06 | [High-Impact Drama Polishing](./skills/06-高能戏剧化情节润色/prompt.md) | Creates high-intensity cinematic prompts for dramatic moments | Action peaks, strong openings, viral hooks |
+| 07 | [Slow Cinematic Polishing](./skills/07-慢节奏细腻质感润色/prompt.md) | Creates subtle, emotional, slow-paced cinematic prompts | Inner monologue, poetic scenes, quiet emotional beats |
 
 ---
 
-## 和其他方案的区别
+## Who Is This For?
 
-| 方案 | 能做什么 | 做不了什么 |
-|------|---------|-----------|
-| 直接让 AI 写分镜 | 能出结果 | 镜头数量随机、时长不可控、情绪戏和动作戏没区别 |
-| 通用提示词模板 | 有一定结构 | 不包含分镜拆分规则，不处理长台词、多人场景、时间跳跃 |
-| **Short Drama Skills** | 6 条专项 Skill，覆盖叙事/情绪/动作/连续剧 ，支持自定义修改/上传| 需要配合 AI 视频生成工具使用（推荐 [LuxReal](https://luxreal.com)） |
+- **AI video developers** building script-to-video workflows
+- **Short drama studios** producing episodic content at scale
+- **Prompt engineers** designing reusable video generation pipelines
+- **Creators** who need professional shot planning without a full production crew
+- **Tool builders** looking for MIT-licensed prompt logic to integrate into their products
 
 ---
 
-## 目录结构
+## How This Is Different
 
-```
+| Approach | What It Can Do | Limitation |
+|----------|----------------|------------|
+| Asking an LLM to "write a storyboard" | Produces a basic result | Shot count, duration, pacing, and camera logic are often random |
+| Generic video prompt templates | Gives a reusable format | Does not handle narrative pacing, long dialogue, multi-character scenes, or action logic |
+| **Short Drama Skills** | Provides production-tested rules for narrative breakdown, emotional beats, action scenes, and prompt polishing | Works best when paired with an AI video generation tool such as LuxReal |
+
+---
+
+## Repository Structure
+
+```txt
 short-drama-skills/
 ├── README.md
-├── README_EN.md
+├── README.zh-CN.md
 ├── skills/
 │   ├── 01-通用叙事拆解/
-│   │   ├── prompt.md          # 完整提示词 + 使用说明
-│   │   ├── skill.md           # Skill 配置
-│   │   └── example/           # 输入输出示例
+│   │   ├── prompt.md
+│   │   ├── prompt.zh-CN.md
+│   │   ├── skill.md
+│   │   └── example/
 │   ├── 02-深度情绪刻画/
 │   ├── 03-详细动态描述/
 │   ├── 04-按剧情连贯拆分副本/
@@ -131,26 +136,33 @@ short-drama-skills/
 
 ---
 
-## 贡献
+## About LuxReal
 
-欢迎提交在真实短剧生产中验证过的 Skill。
+LuxReal is an AI short drama production platform.
 
-1. Fork 本仓库
-2. 在 `skills/` 下新建文件夹，参考 `01-通用叙事拆解` 的格式
-3. 提交 Pull Request，注明使用场景和实际效果
+Upload a script, extract characters and scenes, generate storyboard previews, keep character consistency across episodes, and produce short drama videos at scale.
 
----
+These skills are part of the prompt logic behind LuxReal's internal production workflow.
 
-## 关于 LuxReal
-
-这些 Skill 来自 [LuxReal](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
-) 的内部生产流水线。
-
-LuxReal 是 AI 短剧工业化制作平台——上传剧本，自动拆解场景角色，跨集保持角色一致，批量连续出片。这套 Skill 就是 LuxReal 分镜拆解引擎的核心规则。
-
-**[→ 免费体验 LuxReal，注册即得积分](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
-)**
+[Try LuxReal ->](https://luxreal.com)
 
 ---
 
-如果这套 Skill 对你有用，请给个 ⭐ Star，让更多短剧创作者看到。
+## Contributing
+
+We welcome skills that have been tested in real AI video or short drama production workflows.
+
+To contribute:
+
+1. Fork this repository
+2. Add a new skill under `/skills`
+3. Include a clear use case, prompt file, and example input/output
+4. Open a pull request explaining when and how the skill should be used
+
+Please avoid submitting generic prompts. This repo is focused on production-ready rules that solve specific video generation problems.
+
+---
+
+## License
+
+MIT

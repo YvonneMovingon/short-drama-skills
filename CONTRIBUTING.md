@@ -1,26 +1,47 @@
-# 贡献指南
+# Contributing
 
-欢迎提交在真实短剧生产中验证过的 Skill。
+English | [简体中文](./CONTRIBUTING.zh-CN.md)
 
-## 提交流程
+We welcome skills that have been tested in real short drama or AI video production workflows.
 
-1. Fork 本仓库
-2. 在 `skills/` 下新建文件夹，命名格式：`序号-Skill名称`
-3. 参考现有 Skill 格式创建 `prompt.md`
-4. 如有效果示例，放入 `example/` 目录
-5. 更新根目录 `README.md` 的 Skill 列表
-6. 提交 Pull Request
+This repository is focused on reusable, production-ready prompt rules. Please avoid submitting generic prompts that only describe a style or ask an LLM to "make it better".
 
-## Skill 格式要求
+## Submission Flow
 
-每条 Skill 需包含：
-- **用途说明**：一句话说清楚这条 Skill 解决什么问题
-- **适合场景**：列出 2-3 个具体使用场景
-- **完整提示词**：可直接复制使用
-- **使用说明**：关键参数如何填写
+1. Fork this repository.
+2. Create a new folder under `skills/`.
+3. Add a clear `prompt.md` file.
+4. If possible, include an example input and output under an `example/` or `examples/` folder.
+5. Update the skill list in the root `README.md`.
+6. Open a pull request and explain the production scenario where this skill is useful.
 
-## 质量标准
+## Skill Format
 
-- 必须在真实生产中跑过，不接受未经验证的 Skill
-- 提示词须完整可用，不能有未填写的占位符
-- 有效果对比截图优先录用
+Each skill should include:
+
+- **Purpose:** one sentence explaining the problem this skill solves.
+- **Best for:** 2-3 concrete scenarios where the skill should be used.
+- **Full prompt:** complete and directly copyable.
+- **Usage notes:** important parameters, constraints, or input expectations.
+- **Example:** preferred, especially if the skill produces structured output.
+
+## Quality Standard
+
+- The skill must have been tested in a real or realistic production workflow.
+- The prompt must be complete and usable without hidden internal context.
+- Do not leave unresolved placeholders.
+- Preserve original dialogue and character information when the skill is designed for narrative or video generation.
+- Before submitting, test the prompt with at least one input and check whether the output is structured and executable.
+
+## Translation Notes
+
+This repository uses English as the default public entry point and keeps Chinese versions alongside the English files.
+
+Recommended file pattern:
+
+```txt
+prompt.md        # English default
+prompt.zh-CN.md  # Simplified Chinese version
+```
+
+If you submit a Chinese-only skill, that is still welcome. Please mention it in the pull request so maintainers can help adapt it for English users.
