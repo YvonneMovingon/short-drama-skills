@@ -104,7 +104,7 @@
 |------|---------|-----------|
 | 直接让 AI 写分镜 | 能出结果 | 镜头数量随机、时长不可控、情绪戏和动作戏没区别 |
 | 通用提示词模板 | 有一定结构 | 不包含分镜拆分规则，不处理长台词、多人场景、时间跳跃 |
-| **Short Drama Skills** | 7 条专项 Skill，覆盖叙事/情绪/动作/连续剧 | 需要配合 AI 视频生成工具使用（推荐 [LuxReal](https://luxreal.com)） |
+| **Short Drama Skills** | 7 条专项 Skill，覆盖叙事/情绪/动作/连续剧 | 需要配合 AI 视频生成工具使用（推荐 [LuxReal](https://www.luxreal.com?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)） |
 
 ---
 
@@ -143,11 +143,11 @@ short-drama-skills/
 
 ## 关于 LuxReal
 
-这些 Skill 来自 [LuxReal](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills) 的内部生产流水线。
+这些 Skill 来自 [LuxReal](https://www.luxreal.com?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills) 的内部生产流水线。
 
 LuxReal 是 AI 短剧工业化制作平台——上传剧本，自动拆解场景角色，跨集保持角色一致，批量连续出片。这套 Skill 就是 LuxReal 分镜拆解引擎的核心规则。
 
-**[→ 免费体验 LuxReal，注册即得积分](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)**
+**[→ 免费体验 LuxReal，注册即得积分](https://www.luxreal.com?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)**
 
 ---
 
