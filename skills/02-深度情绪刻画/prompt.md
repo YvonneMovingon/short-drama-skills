@@ -5,8 +5,7 @@
 
 基于"权力博弈"逻辑拆解对话戏镜头设计。所有情绪与权力关系必须转化为摄影机可见的具象画面，内含争吵、情感、审问、交易四类对话的专项拆分规则。
 
-**[在 LuxReal 中一键使用 →](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
-)**
+**[在 LuxReal 中一键使用 →](https://www.luxreal.com?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)**
 
 ---
 
