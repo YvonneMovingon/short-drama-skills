@@ -4,7 +4,7 @@
 
 将剧情描述按固定字段结构转化为可直接用于 AI 视频生成的结构化提示词。
 
-**[在 LuxReal 中一键使用 →](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
+**[在 LuxReal 中一键使用 →](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
 )**
 
 ---
