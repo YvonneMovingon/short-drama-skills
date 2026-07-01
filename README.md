@@ -144,7 +144,7 @@ Upload a script, extract characters and scenes, generate storyboard previews, ke
 
 These skills are part of the prompt logic behind LuxReal's internal production workflow.
 
-[Try LuxReal ->](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
+[Try LuxReal ->](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
 
 ---
 
