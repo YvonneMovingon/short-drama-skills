@@ -58,7 +58,8 @@
 
 **用法二：一键导入 LuxReal**
 
-点击 → [在 LuxReal 中使用通用叙事拆解](https://luxreal.com?skill=01)，注册后自动加载，上传剧本直接出分镜。
+点击 → [在 LuxReal 中使用通用叙事拆解]([https://luxreal.com?skill=01](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
+))，注册后自动加载，上传剧本直接出分镜。
 
 
 **[→ 查看完整提示词](./skills/01-通用叙事拆解/prompt.md)**
@@ -142,11 +143,13 @@ short-drama-skills/
 
 ## 关于 LuxReal
 
-这些 Skill 来自 [LuxReal](https://luxreal.com) 的内部生产流水线。
+这些 Skill 来自 [LuxReal](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
+) 的内部生产流水线。
 
 LuxReal 是 AI 短剧工业化制作平台——上传剧本，自动拆解场景角色，跨集保持角色一致，批量连续出片。这套 Skill 就是 LuxReal 分镜拆解引擎的核心规则。
 
-**[→ 免费体验 LuxReal，注册即得积分](https://luxreal.com)**
+**[→ 免费体验 LuxReal，注册即得积分](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
+)**
 
 ---
 
