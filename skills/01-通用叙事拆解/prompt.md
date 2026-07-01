@@ -15,7 +15,7 @@
 
 ![拆解后的叙事单元](../../script-after.png)
 
-**[在 LuxReal 中一键使用 →](https://www.luxreal.ai/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
+**[在 LuxReal 中一键使用 →](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills
 )**
 
 ---
