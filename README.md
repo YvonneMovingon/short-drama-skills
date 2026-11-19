@@ -67,7 +67,7 @@ You can use these skills in any LLM that supports long prompts.
 
 You can also use the skills directly in LuxReal:
 
-[Use in LuxReal ->](https://www.luxreal.com/festatic/create_ads?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
+[Use in LuxReal ->](https://www.luxreal.ai/features/drama-agent?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)
 
 ---
 
