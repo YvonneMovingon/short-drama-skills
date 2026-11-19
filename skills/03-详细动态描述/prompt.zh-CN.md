@@ -7,7 +7,7 @@
 
 专为动作戏设计的镜头拆分原则。区分普通交锋与关键高光的拆分粒度，内含动接动、物理反馈、动势压迫、群体打斗等 17 条专项规则。
 
-**[在 LuxReal 中一键使用 →](https://luxreal.com?skill=03)**
+**[在 LuxReal 中一键使用 →](https://www.luxreal.ai/features/drama-agent?skill=03&utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)**
 
 ---
 

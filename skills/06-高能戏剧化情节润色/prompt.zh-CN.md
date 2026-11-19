@@ -6,7 +6,7 @@
 
 好莱坞动作片 / 高能蒙太奇风格的提示词生成，强调极致视觉冲击力与信息密度。内含强烈明暗对比、Snap zoom、Dutch angle 等运镜指令。
 
-**[在 LuxReal 中一键使用 →](https://luxreal.com?skill=06)**
+**[在 LuxReal 中一键使用 →](https://www.luxreal.ai/features/drama-agent?skill=06&utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)**
 
 ---
 

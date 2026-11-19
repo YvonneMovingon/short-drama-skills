@@ -17,7 +17,7 @@
 
 ![拆解后的叙事单元](../../assets/script-after.png)
 
-**[在 LuxReal 中一键使用 →](https://www.luxreal.com?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)**
+**[在 LuxReal 中一键使用 →](https://www.luxreal.ai/features/drama-agent?utm_source=GitHub&utm_medium=website&utm_campaign=shortdrama_skills)**
 
 ---
 
